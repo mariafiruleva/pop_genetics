@@ -154,18 +154,32 @@ ggplot(df, aes(x = Time, y = log10(Ne)))+
 The population size has decreased across time.
 
 ## 4
-Let’s make some Bayesian skyline analysis to model demographic histories. We’ll use the data from Atkinson et al., 2007. We’ll need BEAST2 tool and the Tracer application to run the analysis and view the results.
-
-
-**.xml** : configuration file built using BEAUTi.
+Let’s make some Bayesian skyline analysis to model demographic histories.
 
 Questions:
 
 1) What is the (approximately) median log of posterior probability as shown by Tracer?
-Please provide the plot of the distribution.
+
+\begin{figure}[h!]
+\includegraphics[width=0.5\textwidth]{plots/median_posterior.png}
+\caption{Tracer: Median Posterior}
+\end{figure}
+
+
+**Answer**: -30012.0666
 
 2) How does the population size change over time? Were there any bottlenecks?
-Please provide the skyline plot.
 
-3) Compare your results with plots from the original paper. Which population was
-used in your analysis? Are there any differences in Ne values?
+\begin{figure}[h!]
+\includegraphics[width=0.5\textwidth]{plots/skyline.png}
+\caption{Bayesian Skyline}
+\end{figure}
+
+The population size is increased over time.
+It seems that there we no bottlenecks, 
+
+3) Compare your results with plots from the original paper. Which population was used in your analysis? Are there any differences in Ne values?
+
+I guess, the New Guinea population was used for my analysis.
+
+There are no dramatic differences in Ne values obtained during my analysis and the paper's values, and there are similar trends of the growth with an increase in population size starting at ~39 kya in New Guinea.
